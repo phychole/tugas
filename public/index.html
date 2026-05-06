@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upload Tugas Spreadsheet</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Upload Tugas Spreadsheet</h1>
+    <p class="hint">File yang diterima hanya .xls dan .xlsx</p>
+
+    <form id="uploadForm">
+      <label>
+        Nama lengkap siswa
+        <input name="nama" required placeholder="Contoh: Ahmad Fajar Pratama" />
+      </label>
+
+      <label>
+        NISN
+        <input name="nisn" required inputmode="numeric" pattern="[0-9]{6,20}" placeholder="Contoh: 0081234567" />
+      </label>
+
+      <label>
+        Kelas
+        <select name="kelas" required>
+          <option value="">Pilih kelas</option>
+          <option value="X KULINER 1">X KULINER 1</option>
+          <option value="X KULINER 2">X KULINER 2</option>
+          <option value="X KULINER 3">X KULINER 3</option>
+          <option value="X DPB 1">X DPB 1</option>
+          <option value="X DPB 2">X DPB 2</option>
+          <option value="X DPB 3">X DPB 3</option>
+        </select>
+      </label>
+
+      <label>
+        Mata pelajaran
+        <input name="mapel" required placeholder="Contoh: Matematika" />
+      </label>
+
+      <label>
+        Kode upload
+        <input name="kode" type="password" placeholder="Opsional, sesuai pengaturan guru" />
+      </label>
+
+      <label>
+        File tugas
+        <input name="file" type="file" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required />
+      </label>
+
+      <button type="submit">Upload Tugas</button>
+    </form>
+
+    <p id="status"></p>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "@vercel/node": "latest"
+  },
+  "devDependencies": {
+    "vercel": "latest"
+  }
+}
